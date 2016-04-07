@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.gnuproducts.voladraw.MainActivity">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:weightSum="1">
+
+        <ImageButton
+            android:id="@+id/new_btn"
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
+            android:contentDescription="Start New"
+            android:src="@drawable/new_pic"
+            style="@style/Base.Widget.AppCompat.Button.Borderless"
+            android:layout_gravity="center"/>
+        <ImageButton
+            android:id="@+id/pencil_btn"
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
+            android:contentDescription="Pencil"
+            style="@style/Base.Widget.AppCompat.Button.Borderless"
+            android:src="@drawable/pencil"/>
+        <ImageButton
+            android:id="@+id/draw_btn"
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
+            android:contentDescription="Brush"
+            style="@style/Base.Widget.AppCompat.Button.Borderless"
+            android:layout_gravity="center"
+            android:src="@drawable/brush"/>
+        <ImageButton
+            android:id="@+id/erase_btn"
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
+            android:contentDescription="Erase"
+            style="@style/Base.Widget.AppCompat.Button.Borderless"
+            android:layout_gravity="center"
+            android:src="@drawable/eraser"/>
+        <ImageButton
+            android:id="@+id/save_btn"
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
+            android:contentDescription="Save"
+            style="@style/Base.Widget.AppCompat.Button.Borderless"
+            android:layout_gravity="center"
+            android:src="@drawable/save"/>
+        <ImageButton
+            android:id="@+id/opacity_btn"
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:contentDescription="opacity"
+            style="@style/Base.Widget.AppCompat.Button.Borderless"
+            android:src="@drawable/opacity" />
+
+
+
+    </LinearLayout>
+
+   <com.gnuproducts.voladraw.DrawingView
+       android:id="@+id/drawing"
+       android:layout_width="match_parent"
+       android:layout_height="0dp"
+       android:layout_marginBottom="3dp"
+       android:layout_marginLeft="5dp"
+       android:layout_marginRight="5dp"
+       android:background="@drawable/paint_pressed"
+       android:layout_marginTop="3dp"
+       android:layout_weight="0.94" />
+    <LinearLayout
+        android:id="@+id/paint_colors"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:weightSum="1">
+
+        <ImageButton
+            android:id="@+id/picker_btn"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:contentDescription="Paint"
+            android:background="@drawable/paint_pressed"
+            android:src="@drawable/palette"/>
+        <ImageButton
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:contentDescription="Leaf"
+            android:background="@drawable/paint_pressed"
+            android:src="@drawable/leaf"
+            android:onClick="paintClicked"
+            android:tag="leaf"/>
+    </LinearLayout>
+
+</LinearLayout>
